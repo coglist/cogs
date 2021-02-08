@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = "1.0.0" # Use SemVer
+version = "1.0.1" # Use SemVer
 
 setup(
 	name='coglist',
