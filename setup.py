@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 version = "1.0.0" # Use SemVer
 
 setup(
-	name='cogs',
+	name='coglist',
 	version=version,
 	packages=find_packages(),
 	url='https://github.com/coglist/cogs',
