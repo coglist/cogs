@@ -9,7 +9,7 @@ class RedditCog(commands.Cog):
 
 
   @commands.command(name="reddit")
-  async def subreddit(self, ctx, subreddit="minecraft"):
+  async def subreddit(self, ctx : commands.Context, subreddit="minecraft"):
     async with aiohttp.ClientSession() as cs:
         async with cs.get(f'https://www.reddit.com/r/{subreddit}/hot.json') as r:
             res = await r.json()
