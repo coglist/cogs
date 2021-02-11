@@ -6,10 +6,11 @@ import random
 class RedditCog(commands.Cog):
   def __init__(self, bot):
         self.bot = bot
+        default_subreddit = "dankmemes" # The subreddit that is displayed when using the command without any arguments.
 
 
   @commands.command(name="reddit")
-  async def subreddit(self, ctx : commands.Context, subreddit="minecraft"):
+  async def subreddit(self, ctx : commands.Context, subreddit=default_subreddit):
     async with aiohttp.ClientSession() as cs:
         async with cs.get(f'https://www.reddit.com/r/{subreddit}/hot.json') as r:
             res = await r.json()
